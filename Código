@@ -1,0 +1,46 @@
+
+import matplotlib.pyplot as plt
+
+xbox_vendas = {
+2018: 5850000,
+2019: 4493903,
+2020: 6960000,
+2021: 8800000,
+2022: 18500000
+}
+
+switch_vendas = {
+2018: 4966000,
+2019: 4493903,
+2020: 5300000,
+2021: 5579127,
+2022: 4804546
+}
+
+playstation_vendas = {
+2018: 6979000,
+2019: 1196153,
+2020: 942798,
+2021: 3000000,
+2022: 2397705
+}
+
+anos = list(xbox_vendas.keys())
+
+xbox = list(xbox_vendas.values())
+switch = list(switch_vendas.values())
+playstation = list(playstation_vendas.values())
+
+plt.plot(anos, xbox, marker='o', label='Xbox')
+plt.plot(anos, switch, marker='o', label='Nintendo Switch')
+plt.plot(anos, playstation, marker='o', label='PlayStation')
+
+plt.xticks(anos)
+
+plt.xlabel('Ano')
+plt.ylabel('Vendas (em milhões)')
+plt.title('Vendas do Xbox, Nintendo Switch e PlayStation')
+
+plt.legend()
+
+plt.show()
